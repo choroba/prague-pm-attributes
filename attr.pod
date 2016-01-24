@@ -18,7 +18,7 @@ Processed at compile time.
 
 =back
 
-=head3 DRY-er Exporting
+=head2 1. DRY-er Exporting
 
 No need to list exported symbols in C<@EXPORT>.
 
@@ -32,13 +32,13 @@ More advanced solution:
 
 L<Perl6::Export::Attrs>
 
-=head3 Subroutine Attributes
+=head2 2. Subroutine Attributes
 
 L<Class versus instance methods|file:methods.pl.html>
 
 More advanced solution: L<Class::Declare::Attributes>
 
-=head3 Non-empty array
+=head2 3. Non-empty Array
 
 The problem: in the code, you often use
 
