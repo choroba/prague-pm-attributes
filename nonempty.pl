@@ -8,8 +8,6 @@ use feature qw{ say };
     use parent -norequire => 'Tie::StdArray';
     use Carp;
 
-    use Data::Dumper;
-
     sub CLEAR {
         my $self = shift;
         $self->[0] = [];
