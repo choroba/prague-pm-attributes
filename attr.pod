@@ -1,0 +1,56 @@
+=head1 Attributes
+
+I<E. Choroba>
+
+Prague.pm 2016/01/26
+
+=head2 What they are
+
+=over 4
+
+=item *
+
+Way to add information to declarations.
+
+=item *
+
+Processed at compile time.
+
+=back
+
+=head3 DRY-er Exporting
+
+No need to list exported symbols in C<@EXPORT>.
+
+L<Using exported stuff.|file:funcs.pl.html>
+
+L<Exporting stuff.|file:Funcs.pm.html>
+
+L<Implementation of the attribute.|file:Export/Attr.pm.html>
+
+More advanced solution:
+
+L<Perl6::Export::Attrs>
+
+=head3 Subroutine Attributes
+
+L<Class versus instance methods|file:methods.pl.html>
+
+More advanced solution: L<Class::Declare::Attributes>
+
+=head3 Non-empty array
+
+The problem: in the code, you often use
+
+  my @array = keys %hash;
+  die "No data" unless @array;
+
+Can't you check that the hash isn't empty right in the assignment?
+
+We'll need L<tie>.
+
+L<Array you can't assing an empty list to.|file:nonempty.pl.html>
+
+It wasn't easy to find out what L<Tie::StdArray> methods were called
+at different actions. L<perlsub#Autoloading> helped me to debug:
+L<Using AUTOLOAD to debug|file:autoload.pl.html>.
