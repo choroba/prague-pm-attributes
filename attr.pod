@@ -16,6 +16,10 @@ Way to add information to declarations.
 
 Processed at compile time.
 
+=item *
+
+Implemented by L<attributes> (but we'll use L<Attribute::Handlers>).
+
 =back
 
 =head2 1. DRY-er Exporting
